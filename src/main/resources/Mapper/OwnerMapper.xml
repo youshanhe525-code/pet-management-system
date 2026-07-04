@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="pet_utf8.OwnerMapper">
+
+    <select id="selectAll" resultType="pet_utf8.Owner">
+        SELECT oid, oname, phone, address FROM owner
+    </select>
+
+    <insert id="insert" parameterType="pet_utf8.Owner">
+        INSERT INTO owner(oname, phone, address)
+        VALUES(#{oname}, #{phone}, #{address})
+    </insert>
+
+    <update id="update" parameterType="pet_utf8.Owner">
+        UPDATE owner SET oname=#{oname}, phone=#{phone}, address=#{address}
+        WHERE oid=#{oid}
+    </update>
+
+    <delete id="delete">
+        DELETE FROM owner WHERE oid=#{oid}
+    </delete>
+
+</mapper>
