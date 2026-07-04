@@ -20,8 +20,8 @@
     </environments>
 
     <mappers>
-        <mapper resource="mapper/PetMapper.xml"/>
-        <mapper resource="mapper/OwnerMapper.xml"/>
-        <mapper resource="mapper/UserMapper.xml"/>
+        <mapper resource="Mapper/PetMapper.xml"/>
+        <mapper resource="Mapper/OwnerMapper.xml"/>
+        <mapper resource="Mapper/UserMapper.xml"/>
     </mappers>
 </configuration>
